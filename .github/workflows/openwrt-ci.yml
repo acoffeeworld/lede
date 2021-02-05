@@ -201,9 +201,10 @@ jobs:
           # 
 
           # 编译x64固件:
-          # cat >> .config <<EOF
+           cat >> .config <<EOF
           # CONFIG_TARGET_x86=y
-          # CONFIG_TARGET_x86_64=y
+           CONFIG_TARGET_MediaTek_Ralink_MIPS=y
+          # CONFIG_TARGET_MT7621_based_boards=y
           # CONFIG_TARGET_x86_64_Generic=y
           # EOF
 
@@ -283,8 +284,8 @@ jobs:
           # CONFIG_PACKAGE_screen=y
           # CONFIG_PACKAGE_tree=y
           # CONFIG_PACKAGE_vim-fuller=y
-          # CONFIG_PACKAGE_wget=y
-          # EOF
+           CONFIG_PACKAGE_wget=y
+           EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           # cat >> .config <<EOF
